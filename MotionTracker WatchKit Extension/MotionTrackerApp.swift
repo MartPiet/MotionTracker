@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct MotionTrackerApp: App {
+	
 	let contentViewModel = ContentViewModel()
 	
 	@Environment(\.scenePhase) var scenePhase
@@ -17,18 +18,7 @@ struct MotionTrackerApp: App {
             NavigationView {
 				ContentView(viewModel: contentViewModel)
             }
-		}.onChange(of: scenePhase) { newScenePhase in
-			switch newScenePhase {
-			case .background:
-				print("Background")
-			case .inactive:
-				print("Inactive")
-			case .active:
-				
-				print("Active")
-			@unknown default:
-				print("Unknown scene phase: \(newScenePhase)")
-			}
 		}
     }
+	
 }

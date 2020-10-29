@@ -10,6 +10,7 @@ import WatchKit
 import WatchConnectivity
 
 class ContentViewModel: NSObject, ObservableObject {
+	
 	@Published var motionValuesTextRepresentation: String = "Not started"
 	private var isMotionTrackingRunning: Bool = false
 	@Published var motionTrackingButtonTitle: String = "Start Tracking"

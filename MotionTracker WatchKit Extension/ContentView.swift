@@ -17,13 +17,12 @@ struct ContentView: View {
 		self.viewModel = viewModel
 	}
 	
-    var body: some View {
+	var body: some View {
 		VStack {
 			VStack {
 				VStack {
 					Text(viewModel.motionValuesTextRepresentation)
 						.padding()
-					Text("Placeholder")
 				}
 				Spacer()
 				HStack {
@@ -33,11 +32,14 @@ struct ContentView: View {
 				}
 			}
 		}
-    }
+	}
+	
 }
 
 struct ContentView_Previews: PreviewProvider {
+	
     static var previews: some View {
 		ContentView()
     }
+	
 }
