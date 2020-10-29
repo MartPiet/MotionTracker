@@ -96,4 +96,5 @@ class WatchConnectivitySessionService: NSObject, WCSessionDelegate {
 			print("Creating directory failed: \(error)")
 		}
 	}
+	
 }

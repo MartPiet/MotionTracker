@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FileManagerView.swift
 //  MotionTracker
 //
 //  Created by Martin Pietrowski on 25.10.20.
@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct FileManagerView: View {
+	
 	@ObservedObject var folder = Folder()
 	
 	var body: some View {
@@ -48,12 +49,15 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+	
 	static var previews: some View {
-		ContentView()
+		FileManagerView()
 	}
+	
 }
 
 class Folder: ObservableObject {
+	
 	@Published var files: [URL] = []
 	
 	let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -84,9 +88,11 @@ class Folder: ObservableObject {
 			self.files = files
 		}
 	}
+	
 }
 
 class FolderMonitor {
+	
 	// MARK: Properties
 	
 	/// A file descriptor for the monitored directory.
@@ -120,7 +126,9 @@ class FolderMonitor {
 		}
 		// Define a cancel handler to ensure the directory is closed when the source is cancelled.
 		folderMonitorSource?.setCancelHandler { [weak self] in
-			guard let strongSelf = self else { return }
+			guard let strongSelf = self else {
+				return
+			}
 			close(strongSelf.monitoredFolderFileDescriptor)
 			strongSelf.monitoredFolderFileDescriptor = -1
 			strongSelf.folderMonitorSource = nil
@@ -132,8 +140,13 @@ class FolderMonitor {
 	func stopMonitoring() {
 		folderMonitorSource?.cancel()
 	}
+	
 }
 
 extension URL: Identifiable {
-	public var id: String { return lastPathComponent }
+	
+	public var id: String {
+		return lastPathComponent
+	}
+	
 }

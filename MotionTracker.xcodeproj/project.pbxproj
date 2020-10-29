@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7A6DC6D82545F9B700E82005 /* MotionTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC6D72545F9B700E82005 /* MotionTrackerApp.swift */; };
-		7A6DC6DA2545F9B700E82005 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC6D92545F9B700E82005 /* ContentView.swift */; };
+		7A6DC6DA2545F9B700E82005 /* FileManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC6D92545F9B700E82005 /* FileManagerView.swift */; };
 		7A6DC6DC2545F9B800E82005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DC6DB2545F9B800E82005 /* Assets.xcassets */; };
 		7A6DC6DF2545F9B800E82005 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DC6DE2545F9B800E82005 /* Preview Assets.xcassets */; };
 		7A6DC6EA2545F9B800E82005 /* MotionTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC6E92545F9B800E82005 /* MotionTrackerTests.swift */; };
-		7A6DC6F52545F9B800E82005 /* MotionTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC6F42545F9B800E82005 /* MotionTrackerUITests.swift */; };
 		7A6DC6FA2545F9B800E82005 /* MotionTracker WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7A6DC6F92545F9B800E82005 /* MotionTracker WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7A6DC6FF2545F9B800E82005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DC6FE2545F9B800E82005 /* Assets.xcassets */; };
 		7A6DC7062545F9B800E82005 /* MotionTracker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A6DC7052545F9B800E82005 /* MotionTracker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -27,6 +26,15 @@
 		7A7D56242549ED57003B432F /* PersistentDataPointsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D56232549ED57003B432F /* PersistentDataPointsService.swift */; };
 		7A7D562B2549EFD5003B432F /* WatchConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D562A2549EFD5003B432F /* WatchConnectivityService.swift */; };
 		7AD7C2C2254B2638006D42B5 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C2C1254B2638006D42B5 /* DataTransferService.swift */; };
+		7AD7C327254B3B28006D42B5 /* MotionTaggingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C326254B3B28006D42B5 /* MotionTaggingView.swift */; };
+		7AD7C333254B3C50006D42B5 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C332254B3C50006D42B5 /* MenuView.swift */; };
+		7AD7C33F254B435F006D42B5 /* MotionTaggingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C33E254B435F006D42B5 /* MotionTaggingViewModel.swift */; };
+		7AD7C346254B4536006D42B5 /* PersistentDataPointsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D56232549ED57003B432F /* PersistentDataPointsService.swift */; };
+		7AD7C34C254B4546006D42B5 /* MeasurePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC7352545FA7B00E82005 /* MeasurePoint.swift */; };
+		7AD7C358254B459C006D42B5 /* TimeStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C357254B459C006D42B5 /* TimeStamp.swift */; };
+		7AD7C35F254B45AA006D42B5 /* MeasureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C35E254B45AA006D42B5 /* MeasureEvent.swift */; };
+		7AD7C365254B45BB006D42B5 /* TimeStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C357254B459C006D42B5 /* TimeStamp.swift */; };
+		7AD7C36B254B45BE006D42B5 /* MeasureEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C35E254B45AA006D42B5 /* MeasureEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +96,7 @@
 /* Begin PBXFileReference section */
 		7A6DC6D42545F9B700E82005 /* MotionTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6DC6D72545F9B700E82005 /* MotionTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionTrackerApp.swift; sourceTree = "<group>"; };
-		7A6DC6D92545F9B700E82005 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7A6DC6D92545F9B700E82005 /* FileManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerView.swift; sourceTree = "<group>"; };
 		7A6DC6DB2545F9B800E82005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A6DC6DE2545F9B800E82005 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A6DC6E02545F9B800E82005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,8 +104,6 @@
 		7A6DC6E92545F9B800E82005 /* MotionTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionTrackerTests.swift; sourceTree = "<group>"; };
 		7A6DC6EB2545F9B800E82005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A6DC6F02545F9B800E82005 /* MotionTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotionTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A6DC6F42545F9B800E82005 /* MotionTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionTrackerUITests.swift; sourceTree = "<group>"; };
-		7A6DC6F62545F9B800E82005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A6DC6F92545F9B800E82005 /* MotionTracker WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MotionTracker WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6DC6FE2545F9B800E82005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A6DC7002545F9B800E82005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,6 +120,11 @@
 		7A7D56232549ED57003B432F /* PersistentDataPointsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentDataPointsService.swift; sourceTree = "<group>"; };
 		7A7D562A2549EFD5003B432F /* WatchConnectivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityService.swift; sourceTree = "<group>"; };
 		7AD7C2C1254B2638006D42B5 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		7AD7C326254B3B28006D42B5 /* MotionTaggingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionTaggingView.swift; sourceTree = "<group>"; };
+		7AD7C332254B3C50006D42B5 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		7AD7C33E254B435F006D42B5 /* MotionTaggingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionTaggingViewModel.swift; sourceTree = "<group>"; };
+		7AD7C357254B459C006D42B5 /* TimeStamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeStamp.swift; sourceTree = "<group>"; };
+		7AD7C35E254B45AA006D42B5 /* MeasureEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +164,7 @@
 			children = (
 				7A6DC6D62545F9B700E82005 /* MotionTracker */,
 				7A6DC6E82545F9B800E82005 /* MotionTrackerTests */,
-				7A6DC6F32545F9B800E82005 /* MotionTrackerUITests */,
+				7AD7C345254B4504006D42B5 /* MTService */,
 				7A6DC6FD2545F9B800E82005 /* MotionTracker WatchKit App */,
 				7A6DC7092545F9B800E82005 /* MotionTracker WatchKit Extension */,
 				7A6DC6D52545F9B700E82005 /* Products */,
@@ -176,8 +187,11 @@
 			isa = PBXGroup;
 			children = (
 				7A6DC6D72545F9B700E82005 /* MotionTrackerApp.swift */,
+				7AD7C332254B3C50006D42B5 /* MenuView.swift */,
 				7A7D562A2549EFD5003B432F /* WatchConnectivityService.swift */,
-				7A6DC6D92545F9B700E82005 /* ContentView.swift */,
+				7A6DC6D92545F9B700E82005 /* FileManagerView.swift */,
+				7AD7C326254B3B28006D42B5 /* MotionTaggingView.swift */,
+				7AD7C33E254B435F006D42B5 /* MotionTaggingViewModel.swift */,
 				7A6DC6DB2545F9B800E82005 /* Assets.xcassets */,
 				7A6DC6E02545F9B800E82005 /* Info.plist */,
 				7A6DC6DD2545F9B800E82005 /* Preview Content */,
@@ -200,15 +214,6 @@
 				7A6DC6EB2545F9B800E82005 /* Info.plist */,
 			);
 			path = MotionTrackerTests;
-			sourceTree = "<group>";
-		};
-		7A6DC6F32545F9B800E82005 /* MotionTrackerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7A6DC6F42545F9B800E82005 /* MotionTrackerUITests.swift */,
-				7A6DC6F62545F9B800E82005 /* Info.plist */,
-			);
-			path = MotionTrackerUITests;
 			sourceTree = "<group>";
 		};
 		7A6DC6FD2545F9B800E82005 /* MotionTracker WatchKit App */ = {
@@ -237,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				7A6DC7342545FA7B00E82005 /* MeasurePointEntryDescriptionIdentifier.swift */,
-				7A6DC7352545FA7B00E82005 /* MeasurePoint.swift */,
 				7A6DC7362545FA7C00E82005 /* MeasureInterfaceModel.swift */,
 			);
 			path = Measuring;
@@ -254,7 +258,6 @@
 		7AD7C2F5254B37F7006D42B5 /* Data handling */ = {
 			isa = PBXGroup;
 			children = (
-				7A7D56232549ED57003B432F /* PersistentDataPointsService.swift */,
 				7AD7C2C1254B2638006D42B5 /* DataTransferService.swift */,
 			);
 			path = "Data handling";
@@ -268,6 +271,17 @@
 				7A6DC7532545FE8400E82005 /* ContentViewModel.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		7AD7C345254B4504006D42B5 /* MTService */ = {
+			isa = PBXGroup;
+			children = (
+				7A7D56232549ED57003B432F /* PersistentDataPointsService.swift */,
+				7A6DC7352545FA7B00E82005 /* MeasurePoint.swift */,
+				7AD7C357254B459C006D42B5 /* TimeStamp.swift */,
+				7AD7C35E254B45AA006D42B5 /* MeasureEvent.swift */,
+			);
+			path = MTService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,9 +473,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A6DC6DA2545F9B700E82005 /* ContentView.swift in Sources */,
+				7AD7C333254B3C50006D42B5 /* MenuView.swift in Sources */,
+				7AD7C34C254B4546006D42B5 /* MeasurePoint.swift in Sources */,
+				7A6DC6DA2545F9B700E82005 /* FileManagerView.swift in Sources */,
+				7AD7C346254B4536006D42B5 /* PersistentDataPointsService.swift in Sources */,
 				7A6DC6D82545F9B700E82005 /* MotionTrackerApp.swift in Sources */,
 				7A7D562B2549EFD5003B432F /* WatchConnectivityService.swift in Sources */,
+				7AD7C33F254B435F006D42B5 /* MotionTaggingViewModel.swift in Sources */,
+				7AD7C327254B3B28006D42B5 /* MotionTaggingView.swift in Sources */,
+				7AD7C358254B459C006D42B5 /* TimeStamp.swift in Sources */,
+				7AD7C35F254B45AA006D42B5 /* MeasureEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +498,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A6DC6F52545F9B800E82005 /* MotionTrackerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +511,9 @@
 				7A6DC7542545FE8400E82005 /* ContentViewModel.swift in Sources */,
 				7A6DC73F2545FA7C00E82005 /* MeasureInterfaceModel.swift in Sources */,
 				7A6DC74D2545FB2A00E82005 /* Double+Extensions.swift in Sources */,
+				7AD7C365254B45BB006D42B5 /* TimeStamp.swift in Sources */,
 				7A6DC73D2545FA7C00E82005 /* MeasurePointEntryDescriptionIdentifier.swift in Sources */,
+				7AD7C36B254B45BE006D42B5 /* MeasureEvent.swift in Sources */,
 				7A6DC73E2545FA7C00E82005 /* MeasurePoint.swift in Sources */,
 				7A6DC70B2545F9B800E82005 /* MotionTrackerApp.swift in Sources */,
 			);

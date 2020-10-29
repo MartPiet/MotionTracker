@@ -81,7 +81,7 @@ class MotionManager: NSObject {
 					}
 					let measurePointsToSave = strongSelf.measurePoints
 					strongSelf.measurePoints.removeAll()
-					strongSelf.persistentMeasurePointsService.save(measurePoints: measurePointsToSave, startDate: strongSelf.dateStarted ?? Date())
+					strongSelf.persistentMeasurePointsService.save(measurePoints: measurePointsToSave, startDate: strongSelf.dateStarted!)
 				}
 			}
 	}

@@ -14,7 +14,8 @@ struct MotionTrackerApp: App {
 	
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MenuView()
         }
     }
+	
 }

@@ -42,7 +42,7 @@ class PersistentDataPointsService {
     }
     
     private struct Constants {
-        static let directoryName = "dataPoints"
+        static let directoryName = "motionTracking"
         static let fileExtension = "csv"
     }
     
@@ -73,8 +73,23 @@ class PersistentDataPointsService {
             .appendingPathComponent(fileTitle)
             .appendingPathExtension(Constants.fileExtension)
     }
+	
+	private func timeStampFilePath(startDate date: Date) -> URL? {
+		let fileTitle = "\(dateFormatter.string(from: date))_timeStamps"
+		
+		return directoryFilePath?
+			.appendingPathComponent(fileTitle)
+			.appendingPathExtension(Constants.fileExtension)
+	}
     
     // MARK: - API
+	
+	func save(timeStamp: TimeStamp, startDate date: Date) {
+		if let path = timeStampFilePath(startDate: date),
+			let encoded = "\(timeStamp.timeOcurred),\(timeStamp.event)\n".data(using: .utf8) {
+			save(data: encoded, path: path, contentType: .timeStamp)
+		}
+	}
     
 	func save(measurePoints: [MotionMeasurePoint], startDate date: Date) {
 		guard let path = measurePointFilePath(startDate: date),
