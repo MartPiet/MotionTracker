@@ -8,14 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+	
+	// Wenn ich viewmodel hier initialisiere, wird das view model deallocated wenn
+	// die App inaktiv wird. Wieso?
+	@ObservedObject private var viewModel: ContentViewModel
+	
+	init(viewModel: ContentViewModel = ContentViewModel()) {
+		self.viewModel = viewModel
+	}
+	
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+		VStack {
+			VStack {
+				VStack {
+					Text(viewModel.motionValuesTextRepresentation)
+						.padding()
+					Text("Placeholder")
+				}
+				Spacer()
+				HStack {
+					Button(action: viewModel.toggleMotionTracking) {
+						Text(viewModel.motionTrackingButtonTitle)
+					}
+				}
+			}
+		}
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+		ContentView()
     }
 }

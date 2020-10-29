@@ -9,12 +9,28 @@ import SwiftUI
 
 @main
 struct MotionTrackerApp: App {
+	let contentViewModel = ContentViewModel()
+	
+	@Environment(\.scenePhase) var scenePhase
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+				ContentView(viewModel: contentViewModel)
             }
-        }
+		}.onChange(of: scenePhase) { newScenePhase in
+			switch newScenePhase {
+			case .background:
+				print("Background")
+			case .inactive:
+				print("Inactive")
+			case .active:
+				
+				print("Active")
+			@unknown default:
+				print("Unknown scene phase: \(newScenePhase)")
+			}
+		}
+	
 
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }

@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct MotionTrackerApp: App {
+	
+	private let watchConnectivitySessionService = WatchConnectivitySessionService()
+	
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A406D5B2548963100C6BD66 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A406D5A2548963100C6BD66 /* ExtensionDelegate.swift */; };
 		7A6DC6D82545F9B700E82005 /* MotionTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC6D72545F9B700E82005 /* MotionTrackerApp.swift */; };
 		7A6DC6DA2545F9B700E82005 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC6D92545F9B700E82005 /* ContentView.swift */; };
 		7A6DC6DC2545F9B800E82005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DC6DB2545F9B800E82005 /* Assets.xcassets */; };
@@ -23,6 +24,14 @@
 		7A6DC7132545F9B800E82005 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC7122545F9B800E82005 /* ComplicationController.swift */; };
 		7A6DC7152545F9B900E82005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DC7142545F9B900E82005 /* Assets.xcassets */; };
 		7A6DC7182545F9B900E82005 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DC7172545F9B900E82005 /* Preview Assets.xcassets */; };
+		7A6DC73D2545FA7C00E82005 /* MeasurePointEntryDescriptionIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC7342545FA7B00E82005 /* MeasurePointEntryDescriptionIdentifier.swift */; };
+		7A6DC73E2545FA7C00E82005 /* MeasurePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC7352545FA7B00E82005 /* MeasurePoint.swift */; };
+		7A6DC73F2545FA7C00E82005 /* MeasureInterfaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC7362545FA7C00E82005 /* MeasureInterfaceModel.swift */; };
+		7A6DC74D2545FB2A00E82005 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC74C2545FB2A00E82005 /* Double+Extensions.swift */; };
+		7A6DC7542545FE8400E82005 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC7532545FE8400E82005 /* ContentViewModel.swift */; };
+		7A7D56242549ED57003B432F /* PersistentDataPointsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D56232549ED57003B432F /* PersistentDataPointsService.swift */; };
+		7A7D562B2549EFD5003B432F /* WatchConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D562A2549EFD5003B432F /* WatchConnectivityService.swift */; };
+		7AD7C2C2254B2638006D42B5 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C2C1254B2638006D42B5 /* DataTransferService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +91,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A406D5A2548963100C6BD66 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		7A6DC6D42545F9B700E82005 /* MotionTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6DC6D72545F9B700E82005 /* MotionTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionTrackerApp.swift; sourceTree = "<group>"; };
 		7A6DC6D92545F9B700E82005 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +117,14 @@
 		7A6DC7172545F9B900E82005 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A6DC7192545F9B900E82005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A6DC71A2545F9B900E82005 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		7A6DC7342545FA7B00E82005 /* MeasurePointEntryDescriptionIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurePointEntryDescriptionIdentifier.swift; sourceTree = "<group>"; };
+		7A6DC7352545FA7B00E82005 /* MeasurePoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurePoint.swift; sourceTree = "<group>"; };
+		7A6DC7362545FA7C00E82005 /* MeasureInterfaceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureInterfaceModel.swift; sourceTree = "<group>"; };
+		7A6DC74C2545FB2A00E82005 /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		7A6DC7532545FE8400E82005 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		7A7D56232549ED57003B432F /* PersistentDataPointsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentDataPointsService.swift; sourceTree = "<group>"; };
+		7A7D562A2549EFD5003B432F /* WatchConnectivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityService.swift; sourceTree = "<group>"; };
+		7AD7C2C1254B2638006D42B5 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				7A6DC6D72545F9B700E82005 /* MotionTrackerApp.swift */,
+				7A7D562A2549EFD5003B432F /* WatchConnectivityService.swift */,
 				7A6DC6D92545F9B700E82005 /* ContentView.swift */,
 				7A6DC6DB2545F9B800E82005 /* Assets.xcassets */,
 				7A6DC6E02545F9B800E82005 /* Info.plist */,
@@ -216,10 +235,16 @@
 			isa = PBXGroup;
 			children = (
 				7A6DC70A2545F9B800E82005 /* MotionTrackerApp.swift */,
+				7A6DC74B2545FB2A00E82005 /* Extensions */,
+				7A6DC7332545FA7B00E82005 /* Measuring */,
 				7A6DC70C2545F9B800E82005 /* ContentView.swift */,
+				7A7D56232549ED57003B432F /* PersistentDataPointsService.swift */,
+				7A6DC7532545FE8400E82005 /* ContentViewModel.swift */,
+				7AD7C2C1254B2638006D42B5 /* DataTransferService.swift */,
 				7A6DC70E2545F9B800E82005 /* NotificationController.swift */,
 				7A6DC7102545F9B800E82005 /* NotificationView.swift */,
 				7A6DC7122545F9B800E82005 /* ComplicationController.swift */,
+				7A406D5A2548963100C6BD66 /* ExtensionDelegate.swift */,
 				7A6DC7142545F9B900E82005 /* Assets.xcassets */,
 				7A6DC7192545F9B900E82005 /* Info.plist */,
 				7A6DC71A2545F9B900E82005 /* PushNotificationPayload.apns */,
@@ -234,6 +259,24 @@
 				7A6DC7172545F9B900E82005 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7A6DC7332545FA7B00E82005 /* Measuring */ = {
+			isa = PBXGroup;
+			children = (
+				7A6DC7342545FA7B00E82005 /* MeasurePointEntryDescriptionIdentifier.swift */,
+				7A6DC7352545FA7B00E82005 /* MeasurePoint.swift */,
+				7A6DC7362545FA7C00E82005 /* MeasureInterfaceModel.swift */,
+			);
+			path = Measuring;
+			sourceTree = "<group>";
+		};
+		7A6DC74B2545FB2A00E82005 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A6DC74C2545FB2A00E82005 /* Double+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +471,7 @@
 			files = (
 				7A6DC6DA2545F9B700E82005 /* ContentView.swift in Sources */,
 				7A6DC6D82545F9B700E82005 /* MotionTrackerApp.swift in Sources */,
+				7A7D562B2549EFD5003B432F /* WatchConnectivityService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,8 +495,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD7C2C2254B2638006D42B5 /* DataTransferService.swift in Sources */,
+				7A7D56242549ED57003B432F /* PersistentDataPointsService.swift in Sources */,
 				7A6DC70F2545F9B800E82005 /* NotificationController.swift in Sources */,
 				7A6DC70D2545F9B800E82005 /* ContentView.swift in Sources */,
+				7A406D5B2548963100C6BD66 /* ExtensionDelegate.swift in Sources */,
+				7A6DC7542545FE8400E82005 /* ContentViewModel.swift in Sources */,
+				7A6DC73F2545FA7C00E82005 /* MeasureInterfaceModel.swift in Sources */,
+				7A6DC74D2545FB2A00E82005 /* Double+Extensions.swift in Sources */,
+				7A6DC73D2545FA7C00E82005 /* MeasurePointEntryDescriptionIdentifier.swift in Sources */,
+				7A6DC73E2545FA7C00E82005 /* MeasurePoint.swift in Sources */,
 				7A6DC7132545F9B800E82005 /* ComplicationController.swift in Sources */,
 				7A6DC70B2545F9B800E82005 /* MotionTrackerApp.swift in Sources */,
 				7A6DC7112545F9B800E82005 /* NotificationView.swift in Sources */,
@@ -600,9 +652,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"MotionTracker WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = AX82FM22A5;
+				DEVELOPMENT_TEAM = 4Z3PPD7L62;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MotionTracker WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -612,6 +665,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.devpie.MotionTracker.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = Devpie;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -624,9 +678,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"MotionTracker WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = AX82FM22A5;
+				DEVELOPMENT_TEAM = 4Z3PPD7L62;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "MotionTracker WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -636,6 +691,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.devpie.MotionTracker.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = Devpie;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -651,12 +707,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AX82FM22A5;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4Z3PPD7L62;
 				IBSC_MODULE = MotionTracker_WatchKit_Extension;
 				INFOPLIST_FILE = "MotionTracker WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = de.devpie.MotionTracker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Devpie;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -671,12 +729,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AX82FM22A5;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 4Z3PPD7L62;
 				IBSC_MODULE = MotionTracker_WatchKit_Extension;
 				INFOPLIST_FILE = "MotionTracker WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = de.devpie.MotionTracker.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Devpie;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -691,18 +751,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"MotionTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = AX82FM22A5;
+				DEVELOPMENT_TEAM = 4Z3PPD7L62;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MotionTracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.devpie.MotionTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Devpie;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -714,18 +776,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"MotionTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = AX82FM22A5;
+				DEVELOPMENT_TEAM = 4Z3PPD7L62;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MotionTracker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.devpie.MotionTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Devpie;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

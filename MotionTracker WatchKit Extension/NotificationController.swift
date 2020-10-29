@@ -31,3 +31,4 @@ class NotificationController: WKUserNotificationHostingController<NotificationVi
         // Populate your dynamic notification interface as quickly as possible.
     }
 }
+
