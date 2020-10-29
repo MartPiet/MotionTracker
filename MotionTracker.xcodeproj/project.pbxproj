@@ -19,7 +19,6 @@
 		7A6DC7062545F9B800E82005 /* MotionTracker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A6DC7052545F9B800E82005 /* MotionTracker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7A6DC70B2545F9B800E82005 /* MotionTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC70A2545F9B800E82005 /* MotionTrackerApp.swift */; };
 		7A6DC70D2545F9B800E82005 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC70C2545F9B800E82005 /* ContentView.swift */; };
-		7A6DC70F2545F9B800E82005 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC70E2545F9B800E82005 /* NotificationController.swift */; };
 		7A6DC7112545F9B800E82005 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC7102545F9B800E82005 /* NotificationView.swift */; };
 		7A6DC7132545F9B800E82005 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC7122545F9B800E82005 /* ComplicationController.swift */; };
 		7A6DC7152545F9B900E82005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DC7142545F9B900E82005 /* Assets.xcassets */; };
@@ -110,7 +109,6 @@
 		7A6DC7052545F9B800E82005 /* MotionTracker WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MotionTracker WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A6DC70A2545F9B800E82005 /* MotionTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionTrackerApp.swift; sourceTree = "<group>"; };
 		7A6DC70C2545F9B800E82005 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7A6DC70E2545F9B800E82005 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		7A6DC7102545F9B800E82005 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		7A6DC7122545F9B800E82005 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		7A6DC7142545F9B900E82005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 				7A7D56232549ED57003B432F /* PersistentDataPointsService.swift */,
 				7A6DC7532545FE8400E82005 /* ContentViewModel.swift */,
 				7AD7C2C1254B2638006D42B5 /* DataTransferService.swift */,
-				7A6DC70E2545F9B800E82005 /* NotificationController.swift */,
 				7A6DC7102545F9B800E82005 /* NotificationView.swift */,
 				7A6DC7122545F9B800E82005 /* ComplicationController.swift */,
 				7A406D5A2548963100C6BD66 /* ExtensionDelegate.swift */,
@@ -497,7 +494,6 @@
 			files = (
 				7AD7C2C2254B2638006D42B5 /* DataTransferService.swift in Sources */,
 				7A7D56242549ED57003B432F /* PersistentDataPointsService.swift in Sources */,
-				7A6DC70F2545F9B800E82005 /* NotificationController.swift in Sources */,
 				7A6DC70D2545F9B800E82005 /* ContentView.swift in Sources */,
 				7A406D5B2548963100C6BD66 /* ExtensionDelegate.swift in Sources */,
 				7A6DC7542545FE8400E82005 /* ContentViewModel.swift in Sources */,

@@ -30,8 +30,5 @@ struct MotionTrackerApp: App {
 				print("Unknown scene phase: \(newScenePhase)")
 			}
 		}
-	
-
-        WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }
