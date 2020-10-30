@@ -19,7 +19,9 @@ struct FileManagerView: View {
 		NavigationView {
 			List() {
 				ForEach(directory.files, id: \.self) { file in
-					Text(file.lastPathComponent)
+					Button(file.lastPathComponent) {
+						openShareMenu(path: file)
+					}
 				}
 				.onDelete(perform: { indexSet in
 					indexSet.forEach { index in
@@ -33,6 +35,26 @@ struct FileManagerView: View {
 	
 	func deleteFile() {
 		try? FileManager.default.removeItem(at: directory.files.first!)
+	}
+	
+	private func openShareMenu(path: URL) {
+		let activityViewController = UIActivityViewController(
+			activityItems: [path],
+			applicationActivities: nil
+		)
+		
+		activityViewController.excludedActivityTypes = [
+			.addToReadingList,
+			.assignToContact,
+			.openInIBooks,
+			.saveToCameraRoll,
+		]
+		
+		UIApplication.shared.windows.first?.rootViewController?.present(
+			activityViewController,
+			animated: true,
+			completion: nil
+		)
 	}
 	
 }
