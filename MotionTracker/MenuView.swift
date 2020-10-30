@@ -9,10 +9,22 @@ import SwiftUI
 
 struct MenuView: View {
 	
+	private let fileDirectory = FileManager.default.urls(
+		for: .documentDirectory,
+		in: .userDomainMask
+	)
+	.first!
+	.appendingPathComponent("motionTracking", isDirectory: true)
+	
 	var body: some View {
 		TabView {
-			MotionTaggingView().tabItem { Text("MotionTagging") }.tag(1)
-			FileManagerView().tabItem { Text("Files") }.tag(2)
+			MotionTaggingView().tabItem {
+				Text("MotionTagging")
+				
+			}
+			FileManagerView(fileDirectoryURL: fileDirectory).tabItem {
+				Text("Files")
+			}
 		}
 	}
 	

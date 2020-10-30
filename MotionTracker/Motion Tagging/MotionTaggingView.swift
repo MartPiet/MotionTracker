@@ -18,7 +18,7 @@ struct MotionTaggingView: View {
 			VStack {
 				HStack() {
 					Button("New Session") {
-						//
+						viewModel.startSession()
 					}
 					Spacer()
 				}
@@ -28,8 +28,6 @@ struct MotionTaggingView: View {
 						.foregroundColor(.blue)
 				})
 				.frame(width: 200, height: 200)
-				Spacer()
-				Label(/*@START_MENU_TOKEN@*/"Label"/*@END_MENU_TOKEN@*/, systemImage: /*@START_MENU_TOKEN@*/"42.circle"/*@END_MENU_TOKEN@*/)
 				Spacer()
 			}
 			Spacer()

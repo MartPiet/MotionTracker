@@ -50,7 +50,7 @@ class PersistentDataPointsService {
     
     private let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM_HH-mm"
+        dateFormatter.dateFormat = "dd-MM_HH-mm:ss"
         return dateFormatter
     }()
         

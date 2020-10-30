@@ -25,6 +25,9 @@
 		7A6DC7542545FE8400E82005 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6DC7532545FE8400E82005 /* ContentViewModel.swift */; };
 		7A7D56242549ED57003B432F /* PersistentDataPointsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D56232549ED57003B432F /* PersistentDataPointsService.swift */; };
 		7A7D562B2549EFD5003B432F /* WatchConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D562A2549EFD5003B432F /* WatchConnectivityService.swift */; };
+		7A9B340A254C899300DE0952 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B3409254C899300DE0952 /* Directory.swift */; };
+		7A9B3411254C89AD00DE0952 /* FolderMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B3410254C89AD00DE0952 /* FolderMonitor.swift */; };
+		7A9B3418254C89C700DE0952 /* URL+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B3417254C89C700DE0952 /* URL+Identifiable.swift */; };
 		7AD7C2C2254B2638006D42B5 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C2C1254B2638006D42B5 /* DataTransferService.swift */; };
 		7AD7C327254B3B28006D42B5 /* MotionTaggingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C326254B3B28006D42B5 /* MotionTaggingView.swift */; };
 		7AD7C333254B3C50006D42B5 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C332254B3C50006D42B5 /* MenuView.swift */; };
@@ -119,6 +122,9 @@
 		7A6DC7532545FE8400E82005 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		7A7D56232549ED57003B432F /* PersistentDataPointsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentDataPointsService.swift; sourceTree = "<group>"; };
 		7A7D562A2549EFD5003B432F /* WatchConnectivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityService.swift; sourceTree = "<group>"; };
+		7A9B3409254C899300DE0952 /* Directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directory.swift; sourceTree = "<group>"; };
+		7A9B3410254C89AD00DE0952 /* FolderMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderMonitor.swift; sourceTree = "<group>"; };
+		7A9B3417254C89C700DE0952 /* URL+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Identifiable.swift"; sourceTree = "<group>"; };
 		7AD7C2C1254B2638006D42B5 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		7AD7C326254B3B28006D42B5 /* MotionTaggingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionTaggingView.swift; sourceTree = "<group>"; };
 		7AD7C332254B3C50006D42B5 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -188,10 +194,9 @@
 			children = (
 				7A6DC6D72545F9B700E82005 /* MotionTrackerApp.swift */,
 				7AD7C332254B3C50006D42B5 /* MenuView.swift */,
-				7A7D562A2549EFD5003B432F /* WatchConnectivityService.swift */,
-				7A6DC6D92545F9B700E82005 /* FileManagerView.swift */,
-				7AD7C326254B3B28006D42B5 /* MotionTaggingView.swift */,
-				7AD7C33E254B435F006D42B5 /* MotionTaggingViewModel.swift */,
+				7A9B3424254C89E800DE0952 /* FileManager */,
+				7A9B341E254C89DA00DE0952 /* Motion Tagging */,
+				7A9B342A254C89F200DE0952 /* Extension */,
 				7A6DC6DB2545F9B800E82005 /* Assets.xcassets */,
 				7A6DC6E02545F9B800E82005 /* Info.plist */,
 				7A6DC6DD2545F9B800E82005 /* Preview Content */,
@@ -253,6 +258,34 @@
 				7A6DC74C2545FB2A00E82005 /* Double+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7A9B341E254C89DA00DE0952 /* Motion Tagging */ = {
+			isa = PBXGroup;
+			children = (
+				7AD7C326254B3B28006D42B5 /* MotionTaggingView.swift */,
+				7AD7C33E254B435F006D42B5 /* MotionTaggingViewModel.swift */,
+			);
+			path = "Motion Tagging";
+			sourceTree = "<group>";
+		};
+		7A9B3424254C89E800DE0952 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				7A6DC6D92545F9B700E82005 /* FileManagerView.swift */,
+				7A9B3410254C89AD00DE0952 /* FolderMonitor.swift */,
+				7A9B3409254C899300DE0952 /* Directory.swift */,
+				7A7D562A2549EFD5003B432F /* WatchConnectivityService.swift */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		7A9B342A254C89F200DE0952 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7A9B3417254C89C700DE0952 /* URL+Identifiable.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		7AD7C2F5254B37F7006D42B5 /* Data handling */ = {
@@ -474,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD7C333254B3C50006D42B5 /* MenuView.swift in Sources */,
+				7A9B3418254C89C700DE0952 /* URL+Identifiable.swift in Sources */,
 				7AD7C34C254B4546006D42B5 /* MeasurePoint.swift in Sources */,
 				7A6DC6DA2545F9B700E82005 /* FileManagerView.swift in Sources */,
 				7AD7C346254B4536006D42B5 /* PersistentDataPointsService.swift in Sources */,
@@ -481,7 +515,9 @@
 				7A7D562B2549EFD5003B432F /* WatchConnectivityService.swift in Sources */,
 				7AD7C33F254B435F006D42B5 /* MotionTaggingViewModel.swift in Sources */,
 				7AD7C327254B3B28006D42B5 /* MotionTaggingView.swift in Sources */,
+				7A9B340A254C899300DE0952 /* Directory.swift in Sources */,
 				7AD7C358254B459C006D42B5 /* TimeStamp.swift in Sources */,
+				7A9B3411254C89AD00DE0952 /* FolderMonitor.swift in Sources */,
 				7AD7C35F254B45AA006D42B5 /* MeasureEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
