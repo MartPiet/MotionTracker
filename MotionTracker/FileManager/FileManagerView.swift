@@ -33,10 +33,6 @@ struct FileManagerView: View {
 		}
 	}
 	
-	func deleteFile() {
-		try? FileManager.default.removeItem(at: directory.files.first!)
-	}
-	
 	private func openShareMenu(path: URL) {
 		let activityViewController = UIActivityViewController(
 			activityItems: [path],
