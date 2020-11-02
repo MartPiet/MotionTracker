@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MotionTaggingView: View {
 	
-	private let viewModel = MotionTaggingViewModel()
+	@ObservedObject private var viewModel = MotionTaggingViewModel()
 	
 	var body: some View {
 		
@@ -22,6 +22,7 @@ struct MotionTaggingView: View {
 					}
 					Spacer()
 				}
+				Text("Current rep count: \(viewModel.currentRepCount)")
 				Spacer()
 				Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
 					Ellipse()

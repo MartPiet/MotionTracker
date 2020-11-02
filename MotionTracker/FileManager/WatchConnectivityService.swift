@@ -51,6 +51,14 @@ class WatchConnectivitySessionService: NSObject, WCSessionDelegate {
 		saveSession(currentFilePathOfReceivedFile: file.fileURL)
 	}
 	
+	func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+		for messageType in message.keys {
+			if (message[messageType] as? String) == UserEvent.trackingStarted.rawValue {
+				NotificationCenter.default.post(name: Notification.Name("UserEvent.trackingStarted"), object: nil)
+			}
+		}
+	}
+	
 	
 	// Called when a file transfer is done.
 	//

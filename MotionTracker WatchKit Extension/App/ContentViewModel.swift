@@ -42,6 +42,7 @@ class ContentViewModel: NSObject, ObservableObject {
 		extendedRuntimeSession.start()
 		motionManager.startSession()
 		motionTrackingButtonTitle = "Stop Tracking"
+		dataTransferService.sendEventToParentDevice(event: .trackingStarted)
 	}
 	
 	private func stopMotionTracking() {
@@ -49,6 +50,7 @@ class ContentViewModel: NSObject, ObservableObject {
 		motionValuesTextRepresentation = "Stopped"
 		motionTrackingButtonTitle = "Start Tracking"
 		sendDataToParentDevice()
+		dataTransferService.sendEventToParentDevice(event: .trackingStopped)
 	}
 	
 	private func sendDataToParentDevice() {

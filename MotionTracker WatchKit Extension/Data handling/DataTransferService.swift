@@ -23,11 +23,18 @@ class DataTransferService: NSObject {
 		}
 	}
 	
+	func sendEventToParentDevice(event: UserEvent, completion: ((Result<(), Error>) -> Void)? = nil) {
+		WCSession.default.sendMessage(["event": event.rawValue]) { reply in
+		//	reply
+		} errorHandler: { error in
+			completion?(.failure(error))
+		}
+
+	}
+	
 	func sendDataToParentDevice(fileURL: URL, completion: (() -> Void)? = nil) {
-		print("Sending data")
 		let fileTransfer = WCSession.default.transferFile(fileURL, metadata: nil)
 		progressObservings[fileURL] = fileTransfer.progress.observe(\.isFinished) { [weak self] progress, _ in
-			print("Progress...\(progress.fractionCompleted)")
 			if fileTransfer.progress.isFinished {
 				guard let strongSelf = self else {
 					return
@@ -35,13 +42,11 @@ class DataTransferService: NSObject {
 				completion?()
 				strongSelf.progressObservings[fileURL]?.invalidate()
 				strongSelf.progressObservings.removeValue(forKey: fileURL)
-				print("Sending completed!")
 			}
 		}
 	}
 	
 }
-
 
 extension DataTransferService: WCSessionDelegate {
 	
