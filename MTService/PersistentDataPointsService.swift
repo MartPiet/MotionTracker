@@ -63,20 +63,16 @@ class PersistentDataPointsService {
     }()
     
 	private func measurePointFilePath(startDate date: Date) -> URL? {
-        guard let currentFiles = try? FileManager.default.contentsOfDirectory(atPath: directoryFilePath.path) else {
-            return nil
-        }
-        
-        let fileTitle = "\(currentFiles.count)#\(dateFormatter.string(from: date))_measurePoints"
-        
-        return directoryFilePath?
-            .appendingPathComponent(fileTitle)
-            .appendingPathExtension(Constants.fileExtension)
+        let fileTitle = "\(dateFormatter.string(from: date))_measurePoints"
+		return retrieveFilePath(fromFileTitle: fileTitle)
     }
 	
 	private func timeStampFilePath(startDate date: Date) -> URL? {
 		let fileTitle = "\(dateFormatter.string(from: date))_timeStamps"
-		
+		return retrieveFilePath(fromFileTitle: fileTitle)
+	}
+	
+	private func retrieveFilePath(fromFileTitle fileTitle: String) -> URL? {
 		return directoryFilePath?
 			.appendingPathComponent(fileTitle)
 			.appendingPathExtension(Constants.fileExtension)
