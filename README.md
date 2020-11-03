@@ -2,7 +2,7 @@
 
 MotionTracker is an app bundle where you can track raw data from your apple watch for research purposes. Since it is hard to read out specific motions during afterwards you or someone else can tag those motions can tag these motions with the iPhone which is paired with the watch.
 
-![App preview images](resources/appPreview.png)
+![App preview images](https://raw.githubusercontent.com/MartPiet/MotionTracker/main/Resources/appPreview.png)
 
 # Features
 - Easily track CoreMotion raw data which will be stored as a csv file on the paired iPhone.
