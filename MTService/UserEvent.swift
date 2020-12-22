@@ -1,5 +1,5 @@
 //
-//  User Events.swift
+//  UserEvent.swift
 //  MotionTracker
 //
 //  Created by Martin Pietrowski on 02.11.20.

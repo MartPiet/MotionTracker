@@ -72,7 +72,7 @@ class MotionManager: NSObject {
 	
 	// MARK: - Helper
 	
-	private func autosaveMeasurePoints(everySeconds seconds: Double = 1.0) {
+	private func autosaveMeasurePoints(everySeconds seconds: Double = 10.0) {
 		scheduledAutoSavingAction = Timer
 			.scheduledTimer(withTimeInterval: seconds, repeats: true) { [weak self] _ in
 				DispatchQueue.global(qos: .utility).sync {

@@ -17,7 +17,7 @@ class ContentViewModel: NSObject, ObservableObject {
 	private let motionManager = MotionManager()
 	private let dataTransferService = DataTransferService()
 	
-	private let extendedRuntimeSession = WKExtendedRuntimeSession()
+	private var extendedRuntimeSession: WKExtendedRuntimeSession?
 	private let persistentDataPointsService = PersistentDataPointsService()
 	
 	override init() {
@@ -26,7 +26,6 @@ class ContentViewModel: NSObject, ObservableObject {
 	}
 
 	private func setup() {
-		extendedRuntimeSession.delegate = self
 		motionManager.delegate = self
 	}
 	
@@ -39,13 +38,16 @@ class ContentViewModel: NSObject, ObservableObject {
 	}
 	
 	private func startMotionTracking() {
-		extendedRuntimeSession.start()
+		extendedRuntimeSession = WKExtendedRuntimeSession()
+		extendedRuntimeSession?.delegate = self
+		extendedRuntimeSession?.start()
 		motionManager.startSession()
 		motionTrackingButtonTitle = "Stop Tracking"
 		dataTransferService.sendEventToParentDevice(event: .trackingStarted)
 	}
 	
 	private func stopMotionTracking() {
+		extendedRuntimeSession?.invalidate()
 		motionManager.stopSession()
 		motionValuesTextRepresentation = "Stopped"
 		motionTrackingButtonTitle = "Start Tracking"

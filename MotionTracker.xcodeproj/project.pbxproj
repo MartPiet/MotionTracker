@@ -28,8 +28,8 @@
 		7A9B340A254C899300DE0952 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B3409254C899300DE0952 /* Directory.swift */; };
 		7A9B3411254C89AD00DE0952 /* FolderMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B3410254C89AD00DE0952 /* FolderMonitor.swift */; };
 		7A9B3418254C89C700DE0952 /* URL+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9B3417254C89C700DE0952 /* URL+Identifiable.swift */; };
-		7AB8B012255085A5009625D2 /* User Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB8B011255085A5009625D2 /* User Events.swift */; };
-		7AB8B013255085A5009625D2 /* User Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB8B011255085A5009625D2 /* User Events.swift */; };
+		7AB8B012255085A5009625D2 /* UserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB8B011255085A5009625D2 /* UserEvent.swift */; };
+		7AB8B013255085A5009625D2 /* UserEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB8B011255085A5009625D2 /* UserEvent.swift */; };
 		7AD7C2C2254B2638006D42B5 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C2C1254B2638006D42B5 /* DataTransferService.swift */; };
 		7AD7C327254B3B28006D42B5 /* MotionTaggingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C326254B3B28006D42B5 /* MotionTaggingView.swift */; };
 		7AD7C333254B3C50006D42B5 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7C332254B3C50006D42B5 /* MenuView.swift */; };
@@ -127,7 +127,7 @@
 		7A9B3409254C899300DE0952 /* Directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directory.swift; sourceTree = "<group>"; };
 		7A9B3410254C89AD00DE0952 /* FolderMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderMonitor.swift; sourceTree = "<group>"; };
 		7A9B3417254C89C700DE0952 /* URL+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Identifiable.swift"; sourceTree = "<group>"; };
-		7AB8B011255085A5009625D2 /* User Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User Events.swift"; sourceTree = "<group>"; };
+		7AB8B011255085A5009625D2 /* UserEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEvent.swift; sourceTree = "<group>"; };
 		7AD7C2C1254B2638006D42B5 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		7AD7C326254B3B28006D42B5 /* MotionTaggingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionTaggingView.swift; sourceTree = "<group>"; };
 		7AD7C332254B3C50006D42B5 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 				7A7D56232549ED57003B432F /* PersistentDataPointsService.swift */,
 				7A6DC7352545FA7B00E82005 /* MeasurePoint.swift */,
 				7AD7C357254B459C006D42B5 /* TimeStamp.swift */,
-				7AB8B011255085A5009625D2 /* User Events.swift */,
+				7AB8B011255085A5009625D2 /* UserEvent.swift */,
 				7AD7C35E254B45AA006D42B5 /* MeasureEvent.swift */,
 			);
 			path = MTService;
@@ -516,7 +516,7 @@
 				7A6DC6DA2545F9B700E82005 /* FileManagerView.swift in Sources */,
 				7AD7C346254B4536006D42B5 /* PersistentDataPointsService.swift in Sources */,
 				7A6DC6D82545F9B700E82005 /* MotionTrackerApp.swift in Sources */,
-				7AB8B012255085A5009625D2 /* User Events.swift in Sources */,
+				7AB8B012255085A5009625D2 /* UserEvent.swift in Sources */,
 				7A7D562B2549EFD5003B432F /* WatchConnectivityService.swift in Sources */,
 				7AD7C33F254B435F006D42B5 /* MotionTaggingViewModel.swift in Sources */,
 				7AD7C327254B3B28006D42B5 /* MotionTaggingView.swift in Sources */,
@@ -554,7 +554,7 @@
 				7A6DC74D2545FB2A00E82005 /* Double+Extensions.swift in Sources */,
 				7AD7C365254B45BB006D42B5 /* TimeStamp.swift in Sources */,
 				7A6DC73D2545FA7C00E82005 /* MeasurePointEntryDescriptionIdentifier.swift in Sources */,
-				7AB8B013255085A5009625D2 /* User Events.swift in Sources */,
+				7AB8B013255085A5009625D2 /* UserEvent.swift in Sources */,
 				7AD7C36B254B45BE006D42B5 /* MeasureEvent.swift in Sources */,
 				7A6DC73E2545FA7C00E82005 /* MeasurePoint.swift in Sources */,
 				7A6DC70B2545F9B800E82005 /* MotionTrackerApp.swift in Sources */,
