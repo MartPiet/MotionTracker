@@ -1,6 +1,6 @@
 # MotionTracker
 
-MotionTracker is an app bundle where you can track raw data from your apple watch for research purposes. Since it is hard to read out specific motions during afterwards you or someone else can tag those motions can tag these motions with the iPhone which is paired with the watch.
+MotionTracker is an app bundle where you can track raw data from your apple watch for research purposes. Since it is hard to read out specific motions afterwards you or someone else can tag these motions with an iPhone when the desired motion is happening. 
 
 ![App preview images](https://raw.githubusercontent.com/MartPiet/MotionTracker/main/Resources/appPreview.png)
 
@@ -25,7 +25,7 @@ timestamp,acceleration_x,acceleration_y,acceleration_z,attitude_pitch,attitude_r
 ```
 
 ## Tagging motion
-Long press the blue circle at the beginning of a motion and release the circle right after the motion has been finished. The resulting two entries in the csv file will look like this:
+Long press the blue circle at the beginning of a desired motion and release the circle right after the motion has been finished. The resulting two entries in the csv file will look like this:
 
 ```dd-MM_HH-mm-ss_timeStamps.csv```
 ```csv
