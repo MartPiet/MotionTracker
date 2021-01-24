@@ -10,7 +10,7 @@ import WatchConnectivity
 class DataTransferService: NSObject {
 	
 	private let session = WCSession.default
-	private var progressObservings = [URL: NSKeyValueObservation]()
+	private var finishingObservings = [URL: NSKeyValueObservation]()
 	
 	override init() {
 		super.init()
@@ -34,14 +34,14 @@ class DataTransferService: NSObject {
 	
 	func sendDataToParentDevice(fileURL: URL, completion: (() -> Void)? = nil) {
 		let fileTransfer = WCSession.default.transferFile(fileURL, metadata: nil)
-		progressObservings[fileURL] = fileTransfer.progress.observe(\.isFinished) { [weak self] progress, _ in
+		finishingObservings[fileURL] = fileTransfer.progress.observe(\.isFinished) { [weak self] progress, _ in
 			if fileTransfer.progress.isFinished {
 				guard let strongSelf = self else {
 					return
 				}
 				completion?()
-				strongSelf.progressObservings[fileURL]?.invalidate()
-				strongSelf.progressObservings.removeValue(forKey: fileURL)
+				strongSelf.finishingObservings[fileURL]?.invalidate()
+				strongSelf.finishingObservings.removeValue(forKey: fileURL)
 			}
 		}
 	}

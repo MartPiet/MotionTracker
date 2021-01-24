@@ -28,7 +28,7 @@ struct ContentView: View {
 				HStack {
 					Button(action: viewModel.toggleMotionTracking) {
 						Text(viewModel.motionTrackingButtonTitle)
-					}
+					}.disabled(!viewModel.isFinished)
 				}
 			}
 		}

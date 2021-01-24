@@ -16,6 +16,7 @@ class ContentViewModel: NSObject, ObservableObject {
 	@Published var motionTrackingButtonTitle: String = "Start Tracking"
 	private let motionManager = MotionManager()
 	private let dataTransferService = DataTransferService()
+	@Published var isFinished: Bool = true
 	
 	private var extendedRuntimeSession: WKExtendedRuntimeSession?
 	private let persistentDataPointsService = PersistentDataPointsService()
@@ -38,6 +39,7 @@ class ContentViewModel: NSObject, ObservableObject {
 	}
 	
 	private func startMotionTracking() {
+		extendedRuntimeSession?.invalidate()
 		extendedRuntimeSession = WKExtendedRuntimeSession()
 		extendedRuntimeSession?.delegate = self
 		extendedRuntimeSession?.start()
@@ -47,21 +49,40 @@ class ContentViewModel: NSObject, ObservableObject {
 	}
 	
 	private func stopMotionTracking() {
-		extendedRuntimeSession?.invalidate()
 		motionManager.stopSession()
 		motionValuesTextRepresentation = "Stopped"
-		motionTrackingButtonTitle = "Start Tracking"
-		sendDataToParentDevice()
+		motionTrackingButtonTitle = "Finishing..."
+		isFinished = false
+		DispatchQueue.main.async { [weak self] in
+			self?.sendDataToParentDevice() { [weak self] isFinished in
+				guard let strongSelf = self else {
+					return
+				}
+				strongSelf.isFinished = isFinished
+				strongSelf.motionTrackingButtonTitle = "Start Tracking"
+			}
+		}
 		dataTransferService.sendEventToParentDevice(event: .trackingStopped)
 	}
 	
-	private func sendDataToParentDevice() {
+	private func sendDataToParentDevice(completion: @escaping (Bool) -> Void) {
 		let fileURLs = persistentDataPointsService.retrieveSessionFileURLs()
 		
+		if fileURLs.isEmpty {
+			completion(true)
+		}
+		
+		
 		for fileURL in fileURLs {
-			dataTransferService.sendDataToParentDevice(fileURL: fileURL) { [weak self] in
-				self?.persistentDataPointsService.delete(fileURL: fileURL)
-			}
+			dataTransferService.sendDataToParentDevice(fileURL: fileURL, completion:  { [weak self] in
+				guard let strongSelf = self else {
+					return
+				}
+				strongSelf.persistentDataPointsService.delete(fileURL: fileURL)
+				if fileURL == fileURLs.last {
+					completion(true)
+				}
+			})
 		}
 	}
 	
@@ -70,15 +91,17 @@ class ContentViewModel: NSObject, ObservableObject {
 extension ContentViewModel: WKExtendedRuntimeSessionDelegate {
 	
 	func extendedRuntimeSessionDidStart(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
-		
+		print("extendedRuntimeSessionDidStart")
 	}
 	
 	func extendedRuntimeSessionWillExpire(_ extendedRuntimeSession: WKExtendedRuntimeSession) {
+		print("extendedRuntimeSessionWillExpire")
 		stopMotionTracking()
 		motionValuesTextRepresentation = "Session expired"
 	}
 	
 	func extendedRuntimeSession(_ extendedRuntimeSession: WKExtendedRuntimeSession, didInvalidateWith reason: WKExtendedRuntimeSessionInvalidationReason, error: Error?) {
+		print("extendedRuntimeSessionDidInvalidateWith: \(error?.localizedDescription ?? "no error")")
 		stopMotionTracking()
 		motionValuesTextRepresentation = "Session invalid"
 	}

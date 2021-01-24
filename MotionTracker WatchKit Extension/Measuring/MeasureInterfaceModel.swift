@@ -12,7 +12,6 @@ import CoreMotion
 protocol MotionManagerDelegate: AnyObject {
 
 	func measurePointsUpdated(_ interfaceModel: MotionManager, measurePointDescription: String?, error: Error?)
-	func sessionExpirationDateUpdated(_ interfaceModel: MotionManager, expirationDate: Date)
 	func didUpdateRecognisedRepetitons(repetitions: Int)
 	func didRecognise(label: String)
 
