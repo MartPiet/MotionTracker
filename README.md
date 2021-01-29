@@ -34,6 +34,9 @@ timestamp,event
 1604343782.965354,endTag
 ```
 
+Video Demo: https://youtu.be/Qscz2drf6o8
+
+
 # Contribution
 
 This app bundle is basically a MVP, but still should help a lot of people who want to do e.g. machine learning based on core motion data. If you have ideas and want to contribute, consider to contact me if you have any questions: martin@devpie.de
